@@ -16,8 +16,6 @@ const LinkedList = require('./LinkedList');
 */
 
 
-
-
 const main = (function () {
   let SLL = new LinkedList();
 
@@ -27,6 +25,26 @@ const main = (function () {
   SLL.insertLast('Husker');
   SLL.insertLast('Starbuck');
 
-  console.log(SLL);
+  SLL.insertLast('Tauhida');
+
+  SLL.remove('squirrel');
+
+  console.log('SSL:', JSON.stringify(SLL));
 
 })();
+
+
+// const main = () => {
+//   let SLL = new LinkedList();
+
+//   SLL.insertFirst('Apollo');
+//   SLL.insertLast('Boomer');
+//   SLL.insertLast('Helo');
+//   SLL.insertLast('Husker');
+//   SLL.insertLast('Starbuck');
+
+//   return SLL;
+
+// };
+
+// console.log(main());
