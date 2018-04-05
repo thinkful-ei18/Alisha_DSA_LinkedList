@@ -90,6 +90,30 @@ class LinkedList {
   }
 
 
+  insertAfter(existingItem, newItem) {
+    if (this.head === null) {
+      return new Error('Please create a list first');
+    }
+
+    let currentNode = this.head;
+
+    while (currentNode.value) {
+
+      if (currentNode.value !== existingItem) {
+        currentNode = currentNode.next;
+      }
+      else {
+        currentNode.next = new _Node(newItem, currentNode.next);
+        return;
+      }
+    }
+
+    if (!currentNode.value) {
+      throw new Error(`${existingItem} could not be found.`);
+    }
+  }
+
+
   insertLast(value) {
     // add a node to the end of the list
 

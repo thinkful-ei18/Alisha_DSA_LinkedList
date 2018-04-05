@@ -29,8 +29,10 @@ const main = (function () {
 
   // SLL.remove('squirrel'); // Value not found
 
-  SLL.insertBefore('Helo', 'Royce'); // works
+  SLL.insertBefore('Boomer', 'Athena'); // works
   // SLL.insertBefore('Diamond', 'Princess'); // Error: Diamond could not be found.
+
+  SLL.insertAfter('Helo', 'Hotdog');
 
   console.log('SSL:', JSON.stringify(SLL));
 
