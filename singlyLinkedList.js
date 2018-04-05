@@ -25,14 +25,16 @@ const main = (function () {
   SLL.insertLast('Husker');
   SLL.insertLast('Starbuck');
 
-  SLL.insertLast('Tauhida');
+  // SLL.insertLast('Tauhida');
 
   // SLL.remove('squirrel'); // Value not found
 
-  SLL.insertBefore('Boomer', 'Athena'); // works
+  // SLL.insertBefore('Boomer', 'Athena'); // works
   // SLL.insertBefore('Diamond', 'Princess'); // Error: Diamond could not be found.
 
   SLL.insertAfter('Helo', 'Hotdog');
+
+  SLL.insertAt(2, 'alpha');
 
   console.log('SSL:', JSON.stringify(SLL));
 

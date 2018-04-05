@@ -114,6 +114,25 @@ class LinkedList {
   }
 
 
+  insertAt(key, newItem) {
+
+    if (this.head === null) {
+      return new Error('Please create a list first');
+    }
+
+    let currentNode = this.head;
+    let previousNode;
+
+    for (let i=0; i<key-1; i++) {
+      previousNode = currentNode;
+      currentNode = currentNode.next;
+    }
+
+    previousNode.next = new _Node(newItem, previousNode.next);
+
+  }
+
+
   insertLast(value) {
     // add a node to the end of the list
 
