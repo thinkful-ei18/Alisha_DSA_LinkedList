@@ -52,6 +52,44 @@ class LinkedList {
   }
 
 
+  insertBefore(existingItem, newItem) {
+    // existingItem = node.value that I want to insert the new node in front of
+    // newItem = value of the node I want to create before the existingItem
+
+    // check to see if there's a list to add to, if not, throw an error
+    if (this.head === null) {
+      return new Error('Please create a list first');
+    }
+
+    // if the head is the item we're looking for, run the insertFirst method with newItem
+    if (this.head.value === existingItem) {
+      this.insertFirst(newItem);
+      return;
+    }
+
+    // start at the head and continue through the list until you find the right existingItem
+    let currentNode = this.head; // { value: alpha, next: {value: beta} }
+
+
+    while (currentNode.next) { // if the next prop !== null
+
+      if (currentNode.next.value !== existingItem) {
+        currentNode = currentNode.next;
+      }
+      else {
+        // if the existing item WAS found in the list, insert a new node before it 
+        currentNode.next = new _Node(newItem, currentNode.next);
+        return;
+      }
+    }
+
+    // if the existingItem wasn't found in the list... throw an error
+    if (!currentNode.next) {
+      throw new Error(`${existingItem} could not be found.`);
+    }
+  }
+
+
   insertLast(value) {
     // add a node to the end of the list
 
@@ -176,6 +214,20 @@ class LinkedList {
     // if (currentNode.value === value)...
     // reassign the next value of the node BEFORE it, to point to the next value of the node AFTER it
     // if there isn't a node after it, the next value of the node BEFORE it will be "null"
+  }
+
+
+
+
+
+  prettyPrint() {
+    let current = this.head;
+    let pretty = '';
+    while (current) {
+      message += `=> ${current.value}`;
+      current = this.head.next;
+    }
+    console.log(pretty);
   }
 
 }

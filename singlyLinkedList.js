@@ -27,24 +27,11 @@ const main = (function () {
 
   SLL.insertLast('Tauhida');
 
-  SLL.remove('squirrel');
+  // SLL.remove('squirrel'); // Value not found
+
+  SLL.insertBefore('Helo', 'Royce'); // works
+  // SLL.insertBefore('Diamond', 'Princess'); // Error: Diamond could not be found.
 
   console.log('SSL:', JSON.stringify(SLL));
 
 })();
-
-
-// const main = () => {
-//   let SLL = new LinkedList();
-
-//   SLL.insertFirst('Apollo');
-//   SLL.insertLast('Boomer');
-//   SLL.insertLast('Helo');
-//   SLL.insertLast('Husker');
-//   SLL.insertLast('Starbuck');
-
-//   return SLL;
-
-// };
-
-// console.log(main());
