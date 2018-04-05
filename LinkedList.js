@@ -137,7 +137,7 @@ class LinkedList {
       return null;
     }
 
-    if (this.head === value) {
+    if (this.head.value === value) {
       // if the value of the first node is the value we're looking for...
 
       this.head = this.head.next;
