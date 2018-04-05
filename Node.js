@@ -45,4 +45,4 @@ class _DoubleNode {
   }
 }
 
-module.exports = _DoubleNode;
+module.exports = _Node;
