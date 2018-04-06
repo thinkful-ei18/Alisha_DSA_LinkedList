@@ -263,15 +263,15 @@ class LinkedList {
 
 
 
-  prettyPrint() {
-    let current = this.head;
-    let pretty = '';
-    while (current) {
-      message += `=> ${current.value}`;
-      current = this.head.next;
-    }
-    console.log(pretty);
-  }
+  // prettyPrint() {
+  //   let current = this.head;
+  //   let pretty = '';
+  //   while (current) {
+  //     message += `=> ${current.value}`;
+  //     current = this.head.next;
+  //   }
+  //   console.log(pretty);
+  // }
 
 }
 
